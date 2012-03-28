@@ -70,12 +70,12 @@ class Stats
 
   def to_s
     [
-      "Str:     #{str}",
-      "Dex:     #{dex}",
-      "Con:     #{con}",
-      "Wis:     #{wis}",
-      "Int:     #{int}",
-      "Cha:     #{cha}",
+      "Str:     #{str} (#{(str-10)/2})",
+      "Dex:     #{dex} (#{(dex-10)/2})",
+      "Con:     #{con} (#{(con-10)/2})",
+      "Wis:     #{wis} (#{(wis-10)/2})",
+      "Int:     #{int} (#{(int-10)/2})",
+      "Cha:     #{cha} (#{(cha-10)/2})",
       "-----------",
       "Points:  #{@remaining}"
     ].join("\n")
