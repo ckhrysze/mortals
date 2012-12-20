@@ -1,0 +1,29 @@
+<% current_column = 0 %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Power List</title>
+    <link rel="stylesheet" href="powerlist.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+	<td>
+	  <% @powers.each_with_index do |power, i| %>
+
+	    <% if power.column != current_column %>
+	      <% current_column += 1 %>
+	      </td><td>
+	    <% end %>
+
+	    <div class="power">
+	      <%= power.to_html %>
+	    </div>
+
+	  <% end %>
+	</td>
+      </tr>
+    </table>
+  </body>
+</html>
